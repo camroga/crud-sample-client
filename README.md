@@ -1,6 +1,8 @@
-# CrudSample
+# crud-sample-client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+
+This project is an example that shows how to consume a service with Angular particularly using the
+[crud-sample project](https://github.com/camroga/crud-sample). This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
 
 Requirements
 ------------
