@@ -22,15 +22,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 If you have Mac you can install the project using the following command:
 
 ```
-    sudo make install-client
+  sudo make install-client
 ```
 Otherwise, the following should be executed by command line in the root of the project:
 
 ```
-	npm install npm@latest -g
-	npm update
-	npm install -g @angular/cli
-	ng build
+  npm install npm@latest -g
+  npm update
+  npm install -g @angular/cli
+  ng build
 ```
 
 Run
@@ -41,10 +41,10 @@ Launch the server by using the CLI command `ng serve`, with the `--open` option
 If you have Mac you can install the project using the following command:
 
 ```
-    make client
+  make client
 ```
 Otherwise, the following should be executed by command line in the root of the project:
 
 ```
-	ng serve --open
+  ng serve --open
 ```
