@@ -10,7 +10,7 @@ export class Customer {
   constructor(
   	public firstName: string,
   	public surname: string,
-  	public DOB: string,
+  	public dob: string,
   	public streetAddress: string){}
 }
 

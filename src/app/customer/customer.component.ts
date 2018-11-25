@@ -3,6 +3,14 @@ import { MatSort, MatTableDataSource } from '@angular/material';
 import { CustomerInterface } from './customer';
 import { Customer } from './customer.service';
 
+const ELEMENT_DATA: Customer[] = [
+  {firstName: "Emmie", surname: "Jones", streetAddress: "82 Grey Street", dob: "LANTATIONS 6701"},
+  {firstName: "Kenneth", surname: "White", streetAddress: "67 Passage Avenue", dob: "THURSDAY ISLAND 4875"},
+  {firstName: "Jim", surname: "Evans", streetAddress: "98 Daly Terrace", dob: "CARABOODA 6033"},
+  {firstName: "Robert", surname: "Rodriguez", streetAddress: "97 Bresnahans Lane", dob: "FITZROY FALLS 2577"},
+  {firstName: "Kathy", surname: "Ellington", streetAddress: "20 Fergusson Streete", dob: "COOLANESS 2470"},
+];
+
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
@@ -12,7 +20,7 @@ export class CustomerComponent implements OnInit {
 
   private customer : CustomerInterface;
   private customers : Customer[];
-	private displayedColumns: string[] = ['firstName','surname', 'streetAddress', 'DOB'];
+	private displayedColumns: string[] = ['firstName','surname', 'streetAddress', 'dob'];
   private dataSource = new MatTableDataSource<Customer>();
   @ViewChild(MatSort) sort: MatSort;
 
@@ -33,7 +41,8 @@ export class CustomerComponent implements OnInit {
         this.dataSource.sort = this.sort;
       }, 
       err => {
-        this.dataSource = new MatTableDataSource([]);
+        this.dataSource.data = ELEMENT_DATA;
+        this.dataSource.sort = this.sort;
       }
     );
   }
