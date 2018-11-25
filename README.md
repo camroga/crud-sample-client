@@ -17,9 +17,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-If you have Mac you can install the project using the following command:
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build. If you have Mac you can install the project using the following command:
 
 ```
   sudo make install-client
@@ -36,9 +34,7 @@ Otherwise, the following should be executed by command line in the root of the p
 Run
 -----
 
-Launch the server by using the CLI command `ng serve`, with the `--open` option
-
-If you have Mac you can install the project using the following command:
+Launch the server by using the CLI command `ng serve`, with the `--open` option. If you have Mac you can install the project using the following command:
 
 ```
   make client

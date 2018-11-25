@@ -1,7 +1,7 @@
-import { Component , OnInit, Injectable, Inject } from '@angular/core';
-import {MatTableDataSource} from '@angular/material';
+import { Component , OnInit, ViewChild, Injectable, Inject } from '@angular/core';
+import { MatSort, MatTableDataSource } from '@angular/material';
 import { CustomerInterface } from './customer';
-import { CustomerService } from './customer.service';
+import { Customer } from './customer.service';
 
 @Component({
   selector: 'app-customer',
@@ -11,9 +11,10 @@ import { CustomerService } from './customer.service';
 export class CustomerComponent implements OnInit {
 
   private customer : CustomerInterface;
-  private customers : CustomerService[];
+  private customers : Customer[];
 	private displayedColumns: string[] = ['firstName','surname', 'streetAddress', 'DOB'];
-  private dataSource = new MatTableDataSource<CustomerService>();
+  private dataSource = new MatTableDataSource<Customer>();
+  @ViewChild(MatSort) sort: MatSort;
 
   constructor(@Inject('CustomerInterface') customer: CustomerInterface) {
     this.customer = customer;
@@ -29,6 +30,7 @@ export class CustomerComponent implements OnInit {
         console.info(data);
         this.customers = data;
         this.dataSource.data = this.customers;
+        this.dataSource.sort = this.sort;
       }, 
       err => {
         this.dataSource = new MatTableDataSource([]);
