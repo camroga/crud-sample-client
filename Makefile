@@ -4,7 +4,6 @@ default : client
 install-client :
 	npm install npm@latest -g
 	npm update
-	npm install
 	npm install -g @angular/cli
 	ng build
 
